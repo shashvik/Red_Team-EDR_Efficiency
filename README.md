@@ -10,12 +10,12 @@ to mitigate them.
 We have divided the analysis into 3 main sections
 1. Events captured by the EDR tool: What are the various logging events that are captured by 
 the sensor( Windows, Linux, MacBook, Containers) they include items like below:
-    Command line activities
-    Logon, logoff activities
-    File access and modifications
-    DNS Network and port events
-    Registry changes
-    File downloads
+    Command line activities\
+    Logon, logoff activities\
+    File access and modifications\
+    DNS Network and port events\
+    Registry changes\
+    File downloads\
 
 2. Known malicious files: Download set of known malicious hashes to identify what is blocked 
 by Crowdstrike
