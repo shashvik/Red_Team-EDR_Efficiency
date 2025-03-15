@@ -7,7 +7,7 @@ execution of the EDR Tool efficiency analysis.
 Objectives: The main objective of this analysis is to identify the potential gaps in an EDR tool and 
 to mitigate them.
 
-We have divided the analysis into 3 main sections
+We have divided the analysis into 4 main sections
 1. Events captured by the EDR tool: What are the various logging events that are captured by 
 the sensor( Windows, Linux, MacBook, Containers) they include items like below:\
     Command line activities\
@@ -34,6 +34,11 @@ be observed via events portal on the EDR tool.
 6. Samples of malware will be obtained via Malwarebazaar: bazaar.abuse.ch and loaded on to 
 test server and EDR Tool findings will be observed.
 
+4. Threat Intel Integration
+   How well does the EDR tool integrate with their own threat intel solution and how rich is the context
+   a. We will take 15 sample IOA with a combination of malicious IP adress, dns of TOR exit nodes, known C2 servers etc and do both a curl and a dns query to them from the analysis machine
+   b. Observe how well the EDR tool correctly identifies the malicious indicators
+   
 
 
 Known malicious files:
