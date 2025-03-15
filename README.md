@@ -15,11 +15,12 @@ the sensor( Windows, Linux, MacBook, Containers) they include items like below:\
     File access and modifications\
     DNS Network and port events\
     Registry changes\
-    File downloads\
+    File downloads
 
-2. Known malicious files: Download set of known malicious hashes to identify what is blocked 
-by EDR Tool
-
+2. Known malicious files:
+    a. Download set of known malicious files and identify which amongst them were correctly identified and blocked by the hashes
+    b. Download filess malware(lolbas,python,js) and execute them and observe the telemetry and see if the EDR tool correctly idetifies the malware or uses the IOA.
+   
 3. Red Team Emulation: Identify various TTP mapped on to MITTRE that are correctly identified 
 and prevented by the EDR tool.
 
@@ -39,9 +40,14 @@ Known malicious files:
 This test is to identify the efficiency of EDR Tool to identify known malicious files by only their 
 hashes.
 Procedure:
-1. We downloaded 15 malware samples with multiple hits on virustotal onto a test windows 
-server and unzipped the folder.
+1. We downloaded 15 malware samples with multiple hits on virustotal onto a test server and unzipped the folder.
 2. Identify if the file was auto quarantined by the EDR and wait for an alert for the same.
+
+Filess malware:
+This test is to identify the efficiency of EDR Tool to identify malware during the execution phase when the indicators will be loaded into memory
+Procedure:
+1. We downloaded 5 malware samples based on different use cases like ransomware, coinmining etc which soleley run in memory or have an initialization script written in python, js and loads into memory.
+2. Identify if the malware when executed triggers anything on the edr in relation to the suspicious activity, the IOA,IOC
 
 
 Red Team Emulation Tests:
